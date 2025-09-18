@@ -1,0 +1,10 @@
+# This section tells Netlify how to build your project
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# This section makes sure your page routing (React Router) works correctly
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
