@@ -1,0 +1,134 @@
+/* Container for right-side navigation to manage spacing */
+.right-nav-container {
+    gap: 0.75rem;
+    white-space: nowrap;
+}
+
+/* Increased font size and hover effect for nav links */
+.right-nav-container .nav-link {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+    color: white !important;
+}
+
+.right-nav-container .nav-link:hover {
+    background-color: #2c2c2c;
+}
+
+/* IMDbPro Tooltip on Hover */
+.pro-tooltip-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.pro-tooltip {
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background-color: #1f1f1f;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+    z-index: 100;
+    border: 1px solid #444;
+}
+
+.pro-tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #1f1f1f transparent transparent transparent;
+}
+
+.pro-tooltip-container:hover .pro-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pro-tooltip img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.pro-tooltip h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.pro-tooltip p {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-bottom: 5px;
+}
+
+.pro-tooltip button {
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+/* DEFINITIVE FIX: Styles for the search dropdown menu */
+.search-container {
+    position: relative; /* This is essential for positioning the child menu */
+}
+
+.search-dropdown-menu {
+    position: absolute !important;
+    top: 100% !important; /* Force downwards position */
+    left: 0 !important;
+    bottom: auto !important; /* Prevent it from flipping upwards */
+    z-index: 1010 !important;
+    background-color: white !important;
+    border: 1px solid #ddd !important;
+    border-radius: 0 0 8px 8px !important;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175) !important;
+    min-width: 200px;
+}
+
+.search-dropdown-menu .dropdown-item {
+    color: #333 !important; 
+}
+
+.search-dropdown-menu .dropdown-item:hover {
+    background-color: #f5f5f5 !important;
+}
+
+
+/* DEFINITIVE FIX: Custom styles for the Language Dropdown Menu */
+.lang-dropdown-menu {
+    background-color: #333 !important; /* Lighter background for better visibility */
+    border: 1px solid #666 !important;
+    padding: 0.5rem 0;
+}
+
+.lang-dropdown-menu .dropdown-item {
+    color: #ffffff !important; 
+    font-weight: 500;
+    padding: 0.5rem 1.5rem;
+}
+
+.lang-dropdown-menu .dropdown-item:hover {
+    background-color: #444 !important;
+    color: var(--primary-color) !important;
+}
+
